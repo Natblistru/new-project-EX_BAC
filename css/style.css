@@ -64,8 +64,11 @@ a:focus, a:hover {
     text-decoration: underline;
 }
 .menu-header .logo a {
-    display: block;
+    display: flex;
     background-color: #048873;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
 }
 a, a:visited, a:hover, a:focus {
     color: #00aeef;
@@ -75,8 +78,7 @@ img {
     vertical-align: middle;
 }
 .menu-header .logo img {
-    width: 100%;
-    height: 100%;
+    width: 63%;
 }
 .menu-header.auth .logo img {
     margin-top: -10px;
