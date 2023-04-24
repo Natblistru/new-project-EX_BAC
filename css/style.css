@@ -33,7 +33,7 @@ main {
 
 .main-content {
     padding: 0;
-    min-width: calc(100% - 250px);
+    min-width: calc(100% - 262px);
 }
 nav .wrap {
     width: 252px;
@@ -367,6 +367,10 @@ div.manual-item {
     list-style: none;
     counter-reset: tplc;
     font-size: 1.563em;
+}
+.teme-container {
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
 }
 .teme-container h3 {
     font-size: 1.5rem;;
