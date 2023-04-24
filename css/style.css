@@ -296,7 +296,7 @@ img {
 
 div.manual-item {
     text-align: center;
-    width: 25%;
+    width: 33%;
     cursor: pointer;
 }
    
@@ -305,8 +305,13 @@ div.manual-item {
     animation: pulse; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 1s; /* don't forget to set a duration! */
 }
-   
-.manual-item > img {
+  
+.manual-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.manual-item img {
     height: 150px;
     object-fit: cover;
     width: 150px;
@@ -317,9 +322,108 @@ div.manual-item {
 } 
   
 
-.manual-item > p {
+.manual-item p {
     padding-top: 10px;
 }
-   
+
+/*History*/
+.teme-container {
+    padding: 40px 0px;
+}
+.teme-container h2 {
+    font-size: 29px;
+    font-weight: 500;
+}
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress-box {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.progress-box span {
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.125rem;
+}
+
+.progress {
+    width: 130px;
+    background-color: #ddd;
+}
+  
+.bar {
+    width: 1%;
+    height: 8px;
+    background-color: #04AA6D;
+}
+.topic-list {
+    margin-top: 1.25em;
+    list-style: none;
+    counter-reset: tplc;
+    font-size: 1.563em;
+}
+.teme-container h3 {
+    font-size: 1.5rem;;
+    font-weight: 400;
+}
+.topic-header {
+    display: flex;
+    justify-content: space-between;
+}
+.topic-list > li.topic-item {
+    margin-top: 1.1em;
+    line-height: 1.25;
+}
+.topic-list > li {
+    margin-bottom: .5em;
+}
+.topic-header-title {
+    display: flex;
+}   
+.topic-list .num {
+    counter-increment: tplc;
+  }
+.topic-list .num::before {
+    content: counter(tplc,upper-roman) ".";
+    text-align: right;
+    display: block;
+    padding-right: 0.5em;
+    min-width: 1.8em;
+}
+.subtopic-list {
+    padding-left: 2.5em;
+    margin-top: .313em;
+    font-size: .64em;
+    counter-reset: stplc;
+    list-style-type: none;
+}
+.subtopic-list li {
+    line-height: 1.5em;
+    margin-bottom: .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.subtopic-header {
+    display: flex;
+}   
+.subtopic-list .num {
+    counter-increment: stplc;
+}
+.subtopic-list .num::before {
+    content: counter(stplc,decimal) ".";
+}
+
+.teme-container h4 {
+    font-size: 1.125rem;;
+    font-weight: 400;
+}
+
    
    
