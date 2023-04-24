@@ -33,6 +33,7 @@ main {
 
 .main-content {
     padding: 0;
+    min-width: calc(100% - 250px);
 }
 nav .wrap {
     width: 252px;
@@ -274,3 +275,51 @@ img {
     color: #02a66b;
     font-size: 1rem;
    }
+.manuale {
+    padding: 39px 30px;
+    width: 100%;
+}
+.manuale > h2{
+    font-size: 29px;
+    font-weight: 500;
+    background-color: #76a900;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+.manuale-container {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    padding: 40px 45px;
+}
+
+div.manual-item {
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+}
+   
+
+.manual-item:hover {
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+   
+.manual-item > img {
+    height: 150px;
+    object-fit: cover;
+    width: 150px;
+    border-radius: 50%;
+    padding: 11px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px gray solid;
+} 
+  
+
+.manual-item > p {
+    padding-top: 10px;
+}
+   
+   
+   
