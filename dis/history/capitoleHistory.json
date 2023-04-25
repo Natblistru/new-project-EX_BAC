@@ -5,7 +5,25 @@
 		"disciplina": "Istoria",
 		"ciclul": "Ciclul gimnazial",
 		"subtitles": [
-			{"name":"România în Primul Război Mondial","address":"class-9/primul-razboi-mondial/romania-in-primul-razboi"},
+			{"name":"România în Primul Război Mondial","address":"/dis/history/class-9/primul-razboi-mondial/romania-in-primul-razboi",
+				"subjects": [ {"id":"1","name": "Opțiunile politice în perioada neutralității","address":"/dis/history/class-9/primul-razboi-mondial/romania-in-primul-razboi/neutralitate"},
+							  {"id":"2","name": "Intrarea României în război"},
+							  {"id":"3","name": "Operațiile militare din anul 1917"},
+							  {"id":"4","name": "Agravarea situației pe frontul român"},
+							  {"id":"5","name": "Armistițiul de la Focșani și Pacea de la București"}
+				            ],
+				"teste": [ {"id":"1","name": "Выбери верное суждение","complexity":"лёгкое"},
+						   {"id":"2","name": "Установи верность суждения","complexity":"лёгкое"},
+						   {"id":"3","name": "Дополни предложение","complexity":"лёгкое"},
+						   {"id":"4","name": "Последствия событий","complexity":"среднее"},
+						   {"id":"5","name": "Составь предложения","complexity":"среднее"},
+						   {"id":"6","name": "Найди ошибочное суждение","complexity":"лёгкое"},
+						   {"id":"7","name": "Характеристика событий","complexity":"среднее"},
+						   {"id":"8","name": "Составь текст","complexity":"сложное"},
+						   {"id":"9","name": "Хронология событий","complexity":"среднее"},
+						   {"id":"10","name": "Тесты","complexity":"среднее"}
+				         ]			
+			},
 			{"name":"Mișcarea națională a românilor din Basarabia și teritoriile din stânga Nistrului"},
 			{"name":"Formarea Statului Național Unitar Român. Recunoașterea Marii Uniri de la 1918"},
 			{"name":"Conferinţa de Pace de la Paris. Sistemul de la Versailles"}

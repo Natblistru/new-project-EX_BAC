@@ -276,8 +276,9 @@ img {
     font-size: 1rem;
    }
 
-.breadcrumb {
+   .breadcrumb {
     list-style: none;
+    padding: 0 0 8px;
 }
 .breadcrumb > li {
     display: inline;
@@ -386,7 +387,7 @@ div.manual-item {
     animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 1s; /* don't forget to set a duration! */
 }
-.teme-container h3 {
+.teme-container h3, header h3 {
     font-size: 1.5rem;;
     font-weight: 400;
 }
@@ -443,5 +444,45 @@ div.manual-item {
     font-weight: 400;
 }
 
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.title-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title-box h1 {
+    font-weight: 400;
+    font-size: 1.875em;
+    line-height: 1.1;
+   }
+section .block {
+    margin: 0 auto 2em;
+    border: .0625rem solid #ccc;
+    background-color: #fff;
+}
+.block > .header {
+    min-height: 2em;
+    line-height: 2.5em;
+    padding: .3em 1.5em;
+    background-color: #76a900;
+    color: #fff;
+}
+.subjects-container, .tests-container {
+    padding: 2em 2em;
+}
+.subject-item, .test-item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2em;
+}
+.title-item {
+    display: flex;
+    gap: 5px;
+}
+   
    
    

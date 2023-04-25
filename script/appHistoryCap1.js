@@ -18,12 +18,24 @@ async function app(){
         throw new Error(`HTTP error! status: ${response.status}`); } 
         const data = await response.json();
 console.log(data)
-        let template = document.querySelector("#topic-item-template").innerHTML;
-        capitoleList = document.querySelector(".topic-list");
+        let capitolIdx = 0;
+        let temaIdx = 0;
+        let tema = data[capitolIdx]
+        console.log(tema)
+        let template = document.querySelector("#subjects-container-template").innerHTML;
+        capitoleList = document.querySelector(".subjects-container");
 
-        data.forEach(capitol => {
+        tema.subtitles[temaIdx].subjects.forEach(capitol => {
           let renderedHtml = Mustache.render(template, capitol);
           capitoleList.innerHTML += renderedHtml;
+        });
+
+        template = document.querySelector("#tests-container-template").innerHTML;
+        testeList = document.querySelector(".tests-container");
+
+        tema.subtitles[temaIdx].teste.forEach(test => {
+          let renderedHtml = Mustache.render(template, test);
+          testeList.innerHTML += renderedHtml;
         });
 
       } 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregătire examene</title>
-    <link rel="stylesheet" href="../../../../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <script src="https://kit.fontawesome.com/9fb75f3283.js" crossorigin="anonymous"></script>
@@ -115,53 +115,51 @@
                         <a href="/dis/history/" ><span>Istoria</span></a>
                     </li>
                 </ul>
-                <h2> Istoria - pregătire pentru examen clasa 9 </h2>
-                <div class="teme-container">
-                    <div class="program-header">
-                        <h2>clasa 9</h2>
-                        <div class="progress-box">
-                            <span>0%</span>
-                            <div class="progress">
-                                <div class="bar"></div>
-                            </div>
-                        </div>                     
-                    </div>
-                    <ol class="topic-list" type="I">
-                    <template id="topic-item-template">
-                        <li class="topic-item">
-                            <div class="topic-header">
-                                <div class="topic-header-title">
-                                    <span class="num"></span>
-                                    <h3>{{title}}</h3>
+                <div class="title-box">
+                    <div class="title-img">
+                        <img src="/img/parchment.png" alt="">
+                        <h1>România în Primul Război Mondial</h1>
+                    </div>                    
+                    <div class="progress-box">
+                        <span>0%</span>
+                        <div class="progress">
+                            <div class="bar"></div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="main-content-of-page">
+                    <section class="block theory-block">
+                        <header class="header">
+                            <h3>Теория</h3>
+                        </header>
+                        <div class="subjects-container">
+                        <template id="subjects-container-template">
+                            <div class="subject-item">
+                                <div class="title-item">
+                                    <div class="num-item">{{id}}.</div>
+                                    <div class="name-item"><a href={{address}}>{{name}}</a></div>
                                 </div>
-                                <div class="progress-box">
-                                    <span>0%</span>
-                                    <div class="progress">
-                                        <div class="bar"></div>
-                                    </div>
-                                </div> 
+                                <div class="points">V</div>
                             </div>
-                            <ol class="subtopic-list">
-                                {{#subtitles}}
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">{{name}}</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                {{/subtitles}}
-                            </ol>
-                        </li>
-                    </template>
-                    </ol>
+                        </template>
+                        </div>
+                     </section>
+                    <section class="block test-block">
+                        <header class="header">
+                            <h3>Задания</h3>
+                        </header>   
+                        <div class="tests-container">
+                        <template id="tests-container-template">
+                            <div class="test-item">
+                                <div class="title-item">
+                                    <div class="num-item">{{id}}.</div>
+                                    <div class="name-item">{{name}}</div>
+                                </div>
+                                <div class="points">V</div>
+                            </div>
+                        </template>
+                        </div>                    
+                    </section>
                 </div>
             </section>
         </div>
