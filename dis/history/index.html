@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregătire examene</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <script src="https://kit.fontawesome.com/9fb75f3283.js" crossorigin="anonymous"></script>
@@ -102,29 +102,67 @@
                 </div>
             </div>
         </nav>
+    
 
         <div class="main-content">
             <section class="manuale">
-                <h2> Disciplinele de absolvire a cursului gimnazial</h2>
-                <div class="manuale-container">
-                    <div class="manual-item">
-                        <img src="img/limbaRom.jpg" alt="">
-                        <p>Limba română, clasa 9</p>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="/"><span>Discipline</span></a>
+                    </li>
+                </ul>
+                <h2> Istoria - pregătire pentru examen clasa 9 </h2>
+                <div class="teme-container">
+                    <div class="program-header">
+                        <h2>clasa 9</h2>
+                        <div class="progress-box">
+                            <span>0%</span>
+                            <div class="progress">
+                                <div class="bar"></div>
+                            </div>
+                        </div>                     
                     </div>
-                    <div class="manual-item">
-                        <img src="img/matematica.jpg" alt="">
-                        <p>Matematica, clasa 9</p>
-                    </div>
-                    <div class="manual-item">
-                        <a href="dis/history/">
-                            <img src="img/istoria.jpg" alt="">
-                            <p>Istoria, clasa 9</p>
-                        </a>
-                    </div>
+                    <ol class="topic-list" type="I">
+                    <template id="topic-item-template">
+                        <li class="topic-item">
+                            <div class="topic-header">
+                                <div class="topic-header-title">
+                                    <span class="num"></span>
+                                    <h3>{{title}}</h3>
+                                </div>
+                                <div class="progress-box">
+                                    <span>0%</span>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <ol class="subtopic-list">
+                                {{#subtitles}}
+                                <li>
+                                    <div class="subtopic-header">
+                                        <span class="num"></span>
+                                        <h4>
+                                           <a href={{address}}>{{name}}</a>
+                                        </h4>
+                                    </div>
+                                    <div class="progress-box">
+                                        <span>0%</span>
+                                        <div class="progress">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/subtitles}}
+                            </ol>
+                        </li>
+                    </template>
+                    </ol>
                 </div>
             </section>
         </div>
     </main>
-    <script src="script/app.js"></script>
+    <script src="../../script/mustache.min.js"></script>
+    <script src="../../script/appHistory.js"></script>
 </body>
 </html>

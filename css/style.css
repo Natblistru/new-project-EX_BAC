@@ -275,17 +275,31 @@ img {
     color: #02a66b;
     font-size: 1rem;
    }
+
+.breadcrumb {
+    list-style: none;
+}
+.breadcrumb > li {
+    display: inline;
+}
+.breadcrumb > li + li::before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
 .manuale {
     padding: 39px 30px;
     width: 100%;
 }
-.manuale > h2{
+
+.manuale > h2 {
     font-size: 29px;
     font-weight: 500;
-    background-color: #76a900;
+    background-color: #508ccd;
     padding: 15px;
     text-align: center;
     color: white;
+    margin-top: 10px;
 }
 .manuale-container {
     background-color: white;
