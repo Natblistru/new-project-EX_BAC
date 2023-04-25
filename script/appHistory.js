@@ -1,3 +1,39 @@
+window.onscroll = function() {myFunction()};
+
+const navbar = document.getElementById("menu-nav");
+const sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+async function app(){
+  try { 
+    const response = await fetch("capitoleHistory.json");
+     if (!response.ok) { 
+        throw new Error(`HTTP error! status: ${response.status}`); } 
+        const data = await response.json();
+console.log(data)
+        let template = document.querySelector("#topic-item-template").innerHTML;
+        capitoleList = document.querySelector(".topic-list");
+
+        data.forEach(capitol => {
+          let renderedHtml = Mustache.render(template, capitol);
+          capitoleList.innerHTML += renderedHtml;
+        });
+
+      } 
+      catch (error) { 
+         console.error('Error:', error); 
+     }
+
+}
+app();
+
 // progress bar
 /*var i = 0;
 function move() {

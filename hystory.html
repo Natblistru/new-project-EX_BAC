@@ -118,11 +118,12 @@
                         </div>                     
                     </div>
                     <ol class="topic-list" type="I">
+                    <template id="topic-item-template">
                         <li class="topic-item">
                             <div class="topic-header">
                                 <div class="topic-header-title">
                                     <span class="num"></span>
-                                    <h3>Primul război mondial și formarea statului național român</h3>
+                                    <h3>{{title}}</h3>
                                 </div>
                                 <div class="progress-box">
                                     <span>0%</span>
@@ -132,11 +133,12 @@
                                 </div> 
                             </div>
                             <ol class="subtopic-list">
+                                {{#subtitles}}
                                 <li>
                                     <div class="subtopic-header">
                                         <span class="num"></span>
                                         <h4>
-                                           <a href="">România în Primul Război Mondial</a>
+                                           <a href="">{{name}}</a>
                                         </h4>
                                     </div>
                                     <div class="progress-box">
@@ -146,137 +148,16 @@
                                         </div>
                                     </div>
                                 </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Mișcarea națională a românilor din Basarabia și teritoriile din stânga Nistrului</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Formarea Statului Național Unitar Român. Recunoașterea Marii Uniri de la 1918</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Conferinţa de Pace de la Paris. Sistemul de la Versailles</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
+                                {{/subtitles}}
                             </ol>
-
                         </li>
-                        <li class="topic-item">
-                            <div class="topic-header">
-                                <div class="topic-header-title">
-                                    <span class="num"></span>
-                                    <h3>Primul război mondial și formarea statului național român</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <span>0%</span>
-                                    <div class="progress">
-                                        <div class="bar"></div>
-                                    </div>
-                                </div> 
-                            </div>
-                            <ol class="subtopic-list">
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">România în Primul Război Mondial</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Mișcarea națională a românilor din Basarabia și teritoriile din stânga Nistrului</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Formarea Statului Național Unitar Român. Recunoașterea Marii Uniri de la 1918</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="subtopic-header">
-                                        <span class="num"></span>
-                                        <h4>
-                                           <a href="">Conferinţa de Pace de la Paris. Sistemul de la Versailles</a>
-                                        </h4>
-                                    </div>
-                                    <div class="progress-box">
-                                        <span>0%</span>
-                                        <div class="progress">
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ol>
-
-                        </li>                        
+                    </template>
                     </ol>
                 </div>
             </section>
         </div>
     </main>
+    <script src="script/mustache.min.js"></script>
     <script src="script/appHistory.js"></script>
 </body>
 </html>

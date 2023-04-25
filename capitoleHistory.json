@@ -1,0 +1,86 @@
+[
+	{
+		"id": "1",
+		"title": "Primul Război Mondial și formarea statului național român",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"România în Primul Război Mondial"},
+			{"name":"Mișcarea națională a românilor din Basarabia și teritoriile din stânga Nistrului"},
+			{"name":"Formarea Statului Național Unitar Român. Recunoașterea Marii Uniri de la 1918"},
+			{"name":"Conferinţa de Pace de la Paris. Sistemul de la Versailles"}
+		]
+	},
+	{
+		"id": "2",
+		"title": "Lumea în perioada interbelică",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"SUA în perioada interbelică"},
+			{"name":"Europa de Vest în perioada interbelică"},
+			{"name":"România în perioada interbelică"},
+			{"name":"Basarabia în cadrul României Mari (1918-1940)"},
+			{"name":"RASSM (1924-1940). Politica expansionistă a URSS"},
+			{"name":"Cultura și știința în perioada interbelică"},
+			{"name":"Cultura românească în 1918-40"}
+		]
+	},
+	{
+		"id": "3",
+		"title": "Relațiile internaționale în perioada interbelică",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"Alianțe și tratate politico-militare în perioada interbelică"},
+			{"name":"Relațiie sovieto-romane(1948-1940). Consecintele pactului Molotov-Ribbentrop"},
+			{"name":"Pierderile teritoriale ale României în vara anului 1940"},
+			{"name":"Formarea RSSM și instaurarea regimului comunist"}
+		]
+	},
+	{
+		"id": "4",
+		"title": "Al Doilea Război Mondial",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"Al Doilea Război Mondial 1939-1945"},
+			{"name":"Spațiul românesc între 1941 şi 1944"},
+			{"name":"Crime de război. Holocaust"},
+			{"name":"Consecințele celui de-al Doilea Război Mondial"}
+		]
+	},
+	{
+		"id": "5",
+		"title": "Lumea postbelică",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"Relațiile internaționale în perioada 1945 –1991. Constituirea ONU"},
+			{"name":"Uniunea Sovietică în perioada postbelică"},
+			{"name":"RSSM. Economie şi societate (1944-1985)"},
+			{"name":"Foametea, represiile și deportările staliniste din RSSM"}
+		]
+	},
+	{
+		"id": "6",
+		"title": "Lumea la sfârșitul secolului XX - începutul secolului XXI",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"RSSM între 1985 –1991. Proclamarea independenței Republicii Moldova"},
+			{"name":"Războiul de pe Nistru"}
+		]
+	},
+	{
+		"id": "7",
+		"title": "Cultura și știința în perioada postbelică",
+		"disciplina": "Istoria",
+		"ciclul": "Ciclul gimnazial",
+		"subtitles": [
+			{"name":"Cultura și știința în RSSM (1944–1991)"},
+			{"name":"Evoluția culturii în Republica Moldova"},
+			{"name":"Cultura și știința universală în Epoca Contemporană"}
+		]
+	}
+]
