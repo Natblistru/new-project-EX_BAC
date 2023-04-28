@@ -56,21 +56,21 @@ console.log(data)
         let temaIdx = 0;
         let tema = data[capitolIdx]
         console.log(tema)
-        // let template = document.querySelector("#subjects-container-template").innerHTML;
-        // capitoleList = document.querySelector(".subjects-container");
+        let template = document.querySelector("#subjects-container-template").innerHTML;
+        capitoleList = document.querySelector(".subjects-container");
 
-        // tema.subtitles[temaIdx].subjects.forEach(capitol => {
-        //   let renderedHtml = Mustache.render(template, capitol);
-        //   capitoleList.innerHTML += renderedHtml;
-        // });
+        tema.subtitles[temaIdx].subjects.forEach(capitol => {
+          let renderedHtml = Mustache.render(template, capitol);
+          capitoleList.innerHTML += renderedHtml;
+        });
 
-        // template = document.querySelector("#tests-container-template").innerHTML;
-        // testeList = document.querySelector(".tests-container");
+        template = document.querySelector("#tests-container-template").innerHTML;
+        testeList = document.querySelector(".tests-container");
 
-        // tema.subtitles[temaIdx].teste.forEach(test => {
-        //   let renderedHtml = Mustache.render(template, test);
-        //   testeList.innerHTML += renderedHtml;
-        // });
+        tema.subtitles[temaIdx].teste.forEach(test => {
+          let renderedHtml = Mustache.render(template, test);
+          testeList.innerHTML += renderedHtml;
+        });
 
       } 
       catch (error) { 
