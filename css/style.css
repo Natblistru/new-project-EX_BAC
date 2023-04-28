@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 html, body {
     height: 100%;
     width: 100%;
@@ -12,6 +15,7 @@ html, body {
     color: #4e4e3f;
     background-color: #ececec;
 }
+
 body {
     font-weight: 400;
     font-family: "Open Sans",sans-serif;
@@ -484,5 +488,9 @@ section .block {
     gap: 5px;
 }
    
+span[id] {
+    font-weight: bold;
+    color: #76a900;
+  } 
    
    
