@@ -3,6 +3,15 @@ window.onscroll = function() {myFunction()};
 const navbar = document.getElementById("menu-nav");
 const sticky = navbar.offsetTop;
 
+const slider = document.querySelector('.swiper-container');
+let mySwiper = new Swiper(slider, {
+    slidesPerView: 1,  
+})
+
+document.querySelector('.buttonNext').addEventListener('click',()=>{
+    mySwiper.slideNext();
+}) 
+
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
