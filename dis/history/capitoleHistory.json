@@ -6,7 +6,7 @@
 		"ciclul": "Ciclul gimnazial",
 		"subtitles": [
 			{"name":"România în Primul Război Mondial","address":"/dis/history/class-9/primul-razboi-mondial/romania-in-primul-razboi",
-				"subjects": [ {"id":"1","name": "Opțiunile politice în perioada neutralității","address":"/dis/history/class-9/primul-razboi-mondial/romania-in-primul-razboi/neutralitate"},
+				"subjects": [ {"id":"1","name": "Opțiunile politice în perioada neutralității","address":"/dis/history/class-9/primul-razboi-mondial/romania-in-primul-razboi/neutralitate","innerHTML":"<div><div>Primul Război Mondial, declanșat iniţial între <span>2 tabere politico-militare (Puterile Centrale și Antanta)</span>, a adus schimbări esenţiale în evoluţia istorică a României și în destinul românilor care trăiau în <span>teritoriile aflate sub ocupaţie străină</span>.</div><div>&nbsp;</div><div>Situaţia statului român în raport cu acest eveniment era destul de complicată: <em>pe de o parte</em>, nefiind o ţară cu un <span>potenţial economic</span>, <span>politic </span> și <span>militar </span>apreciabil, nu era de așteptat ca România să joace vreun rol în acea confruntare, iar <em>pe de altă parte</em>, situarea ei într-o <span>vecinătate cu marile imperii (Ausro-Ungaria, Rusia și Imperiul Otoman) </span>nu putea să o lase complet neangajată în război.</div><div>&nbsp;</div><div><img src='https://upload.wikimedia.org/wikipedia/commons/a/a4/Map_Europe_alliances_1914-ro.svg' width='100%'></div>"},
 							  {"id":"2","name": "Intrarea României în război"},
 							  {"id":"3","name": "Operațiile militare din anul 1917"},
 							  {"id":"4","name": "Agravarea situației pe frontul român"},

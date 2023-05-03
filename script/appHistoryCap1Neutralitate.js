@@ -22,10 +22,12 @@ for (i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.padding = "0 2em";
+      panel.style.margin = "0";
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-      panel.style.padding = "2em 2em";
+      panel.style.maxHeight = (panel.scrollHeight + 18) + "px";
+      panel.style.margin = "1em 0 2em";
+//      panel.style.padding = "2em 2em";
     } 
   });
 }
@@ -83,23 +85,24 @@ async function app(){
 console.log(data)
         let capitolIdx = 0;
         let temaIdx = 0;
+        let subjectIdx = 0;
         let tema = data[capitolIdx]
         console.log(tema)
-        let template = document.querySelector("#subjects-container-template").innerHTML;
-        capitoleList = document.querySelector(".subjects-container");
+        let capitoleList = document.querySelector(".theory-block .text-block");
+        capitoleList.innerHTML = tema.subtitles[temaIdx].subjects[subjectIdx].innerHTML;
 
-        tema.subtitles[temaIdx].subjects.forEach(capitol => {
-          let renderedHtml = Mustache.render(template, capitol);
-          capitoleList.innerHTML += renderedHtml;
-        });
+        // tema.subtitles[temaIdx].subjects.forEach(capitol => {
+        //   let renderedHtml = Mustache.render(template, capitol);
+        //   capitoleList.innerHTML += renderedHtml;
+        // });
 
-        template = document.querySelector("#tests-container-template").innerHTML;
-        testeList = document.querySelector(".tests-container");
+        // template = document.querySelector("#tests-container-template").innerHTML;
+        // testeList = document.querySelector(".tests-container");
 
-        tema.subtitles[temaIdx].teste.forEach(test => {
-          let renderedHtml = Mustache.render(template, test);
-          testeList.innerHTML += renderedHtml;
-        });
+        // tema.subtitles[temaIdx].teste.forEach(test => {
+        //   let renderedHtml = Mustache.render(template, test);
+        //   testeList.innerHTML += renderedHtml;
+        // });
 
       } 
       catch (error) { 

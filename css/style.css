@@ -465,14 +465,14 @@ div.manual-item {
     font-size: 1.875em;
     line-height: 1.1;
    }
-   section .block {
+section .block {
     margin: 0 auto 2em;
     border: .0625rem solid #ccc;
     background-color: #fff;
     box-shadow: 1px 1px 16px #ccc;
 }
 
-.accordion {
+ .accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -500,15 +500,13 @@ div.manual-item {
   .accordion.active h3:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
-  
   .panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
-
+  } 
   .hide {
     display: none;
   }
@@ -519,7 +517,7 @@ div.manual-item {
 
 
 
-.block .header, .block .accordion {
+.block .header, .block .accordion{
     min-height: 2em;
     line-height: 2.5em;
     padding: .3em 1.5em;
