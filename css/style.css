@@ -37,7 +37,8 @@ main {
 
 .main-content {
     padding: 0;
-    min-width: calc(100% - 262px);
+    width: 768px;
+    margin: 0 auto;
 }
 nav .wrap {
     width: 252px;
@@ -464,12 +465,61 @@ div.manual-item {
     font-size: 1.875em;
     line-height: 1.1;
    }
-section .block {
+   section .block {
     margin: 0 auto 2em;
     border: .0625rem solid #ccc;
     background-color: #fff;
+    box-shadow: 1px 1px 16px #ccc;
 }
-.block > .header {
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  accordion.active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion h3:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #fff;;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .accordion.active h3:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .hideImportant {
+    display: none !important;
+  }
+
+
+
+.block .header, .block .accordion {
     min-height: 2em;
     line-height: 2.5em;
     padding: .3em 1.5em;
@@ -478,6 +528,10 @@ section .block {
 }
 .subjects-container, .tests-container {
     padding: 2em 2em;
+}
+
+.subjects-container.panel {
+    padding: 0;
 }
 .subject-item, .test-item {
     display: flex;

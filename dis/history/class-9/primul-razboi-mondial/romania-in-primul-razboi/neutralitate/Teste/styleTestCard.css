@@ -227,7 +227,7 @@ html {
   .step-mechanic .slate-image-wrapper {
     display: block;
     height: 300px;
-    width: 252px;
+    /* width: 252px; */
   }
   .answer .slate-image-wrapper {
     display: block;
@@ -236,7 +236,7 @@ html {
   }
   .step-mechanic .slate-image-wrapper img {
     display: block;
-    width: 252px; 
+    width: 100%; 
     height: 300px;
   }
   .answer .slate-image-wrapper img {

@@ -3,6 +3,24 @@ window.onscroll = function() {myFunction()};
 const navbar = document.getElementById("menu-nav");
 const sticky = navbar.offsetTop;
 
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.padding = "0 2em";
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.padding = "2em 2em";
+    } 
+  });
+}
+
+
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
