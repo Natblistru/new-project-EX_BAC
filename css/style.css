@@ -560,40 +560,17 @@ section .block {
   /* Стили для картинки в модальном окне */
   .modal-img {
     margin: auto;
-    position: relative;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    /* animation-name: animatetop;
-    animation-duration: 0.6s */
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
   }
-
-  /* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-.modal-box {
-    /* position: relative;
-    margin: auto;
-    padding: 18px; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fefefe;
-    border: 1px solid #888;
-    width: 70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    user-select: none;
-
-    /* -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s */
+  
+  
+  
+  .modal-box {
+    width: 60%;
   }
+  
   
   /* Стили для кнопки закрытия модального окна */
   .close {
@@ -616,6 +593,23 @@ section .block {
   .close-animation {
     opacity: 0;
     transition: opacity 0.4s ease-out;
+  }
+  .modal-content {
+    display: flex;
+    height: auto;
+    margin: 40px auto;
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
   }
 
 
@@ -662,24 +656,24 @@ section .block {
     line-height: 1.4;
 }
  */  
-#box1 .modal-body{
+ #box1 .modal-body{
     padding: 0px 12px;
     line-height: 1.4;
-
-}
-
-#box1 ul{
+  
+  }
+  
+  #box1 ul{
     padding: 5px 0;
-}
-#box1  ul li {
+  }
+  #box1  ul li {
     position: relative;
     padding: 0 0 0 33px;
     list-style-type: none;
-}
-#box1  ul li:nth-child(odd) {
+  }
+  #box1  ul li:nth-child(odd) {
   background: #f9f9f9;
-}
-#box1 ul li::before {
+  }
+  #box1 ul li::before {
     content: '';
     position: absolute;
     border-style: solid;
@@ -689,18 +683,18 @@ section .block {
     transform: rotate(45deg);
     height: 8px;
     width: 4px;
-}
-
-#box1 .modal-header h5 {
+  }
+  
+  #box1 .modal-header h5 {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 8px 0;
     text-align: center;
     color: #76a900;
-} 
-.light-shadow{
+  } 
+  .light-shadow{
     text-shadow: 1px 1px 1px #aba9a9;
-}
+  }
    
    
    
