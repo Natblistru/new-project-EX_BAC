@@ -12,33 +12,112 @@ document.querySelector('.buttonNext').addEventListener('click',()=>{
 }) 
 
 
-const modalImg = document.getElementById('modalImg');
-const ImgInModal = document.getElementById('img01');
-const closeSpanImg = document.getElementById('spanImgInModal');
-
-const modalBox = document.getElementById('modalBox');
-const BoxInModalHeader = document.querySelector('#box01 .modal-header h5');
-const BoxInModalBody = document.querySelector('#box01 .modal-body');
-const closeSpanBox = document.getElementById('spanBoxInModal');
+const modal = document.getElementById('myModal');
+const spanClose = document.getElementsByClassName('close')[0];
+const modalImg = document.getElementById('img01');
+const modalBox = document.getElementById('box1');
+const BoxInModalHeader = document.querySelector('#box1 .modal-header h5');
+const BoxInModalBody = document.querySelector('#box1 .modal-body');
 
 // Добавляем обработчик клика на кнопку закрытия модального окна
-closeSpanImg.addEventListener('click', function() {
-  modalImg.style.display = "none";
+spanClose.addEventListener('click', function() {
+  // Запускаем анимацию скрытия
+  modal.classList.add('close-animation');
 });
-window.addEventListener('click', function(event) {
-  if (event.target == modalImg) {
+// Добавляем обработчик события transitionend на .modal
+modal.addEventListener('transitionend', function(event) {
+  // Если это анимация закрытия и свойство, которое изменилось - это opacity
+  if (event.propertyName === 'opacity' && !modal.classList.contains('show')) {
+    modal.style.display = "none";
+    modal.classList.remove('close-animation');
+    modalBox.style.zIndex = "0";
+    modalBox.style.display = "none";
     modalImg.style.display = "none";
   }
 });
-closeSpanBox.addEventListener('click', function() {
-  modalBox.style.display = "none";
-});
-window.addEventListener('click', function(event) {
-  if (event.target == modalBox) {
-    modalBox.style.display = "none";
-  }
-});
 
+modalImg.onmousedown = function(event) { // (1) start the process
+
+  let shiftX = event.clientX - modalImg.getBoundingClientRect().left;
+  let shiftY = event.clientY - modalImg.getBoundingClientRect().top;
+
+  modalImg.style.position = 'absolute';
+  modalBox.style.position = 'absolute';
+  modalImg.style.zIndex = 1000;
+  modalBox.style.zIndex = 998;   
+  document.body.appendChild(modalImg);
+  // ...and put that absolutely positioned modalImg under the cursor
+  moveAt(event.pageX, event.pageY);
+
+  function moveAt(pageX, pageY) {
+      modalImg.style.left = pageX - shiftX + 'px';
+      modalImg.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+  }
+
+  // (3) move the modalImg on mousemove
+  document.addEventListener('mousemove', onMouseMove);
+
+  // (4) drop the modalImg, remove unneeded handlers
+  modalImg.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    modalImg.onmouseup = null;
+  };
+
+};
+modalImg.ondragstart = function() {
+  return false;
+};
+
+
+let offsetX, offsetY;
+
+
+modalBox.onmousedown = function(event) { // (1) start the process
+
+  // let shiftX = event.clientX - modalBox.getBoundingClientRect().left;
+  // let shiftY = event.clientY - modalBox.getBoundingClientRect().top;
+
+  offsetX = event.clientX - modalBox.offsetLeft;
+  offsetY = event.clientY - modalBox.offsetTop;
+
+  // (2) prepare to moving: make absolute and top by z-index
+  modalBox.style.position = 'absolute';
+  modalBox.style.zIndex = 1000;
+  modalImg.style.zIndex = 998;
+  document.body.appendChild(modalBox);
+  // ...and put that absolutely positioned modalImg under the cursor
+  moveAtmodalBox(event.pageX , event.pageY);
+
+  function moveAtmodalBox(pageX, pageY) {
+      // modalBox.style.left = pageX - shiftX + 'px';
+      // modalBox.style.top = pageY - shiftY + 'px';
+      modalBox.style.left = pageX - offsetX + 'px';
+      modalBox.style.top = pageY  + 'px';
+  }
+
+  function onMouseMovemodalBox(event) {
+    moveAtmodalBox(event.pageX, event.pageY);
+  }
+
+  // (3) move the modalImg on mousemove
+  document.addEventListener('mousemove', onMouseMovemodalBox);
+
+  // (4) drop the modalImg, remove unneeded handlers
+    modalBox.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMovemodalBox);
+    modalBox.onmouseup = null;
+  };
+
+
+};
+
+modalBox.ondragstart = function() {
+  return false;
+};
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -54,7 +133,6 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
       panel.style.margin = "1em 0 2em";
-//      panel.style.padding = "2em 2em";
     } 
   });
 }
@@ -146,7 +224,9 @@ console.log(data)
         mySpansImg.forEach((mySpan) => {
           mySpan.addEventListener('click', function() {
             const imgPath = this.getAttribute('data-img');
-            ImgInModal.src = imgPath;
+            modalImg.src = imgPath;
+            modalImg.style.zIndex = "98";
+            modal.style.display = "block";
             modalImg.style.display = "block";
           });
         });
@@ -158,7 +238,9 @@ console.log(data)
             const idxNota = +this.getAttribute('data-box') - 1;
             BoxInModalHeader.innerHTML = tema.subtitles[temaIdx].subjects[subjectIdx].note[idxNota].headerInnerHTML;
             BoxInModalBody.innerHTML = tema.subtitles[temaIdx].subjects[subjectIdx].note[idxNota].bodyInnerHTML;
+            modalBox.style.zIndex = "99";
             modalBox.style.display = "block";
+            modal.style.display = "block";
           });
         });
       } 

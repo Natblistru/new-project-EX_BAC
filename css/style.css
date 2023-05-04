@@ -558,15 +558,15 @@ section .block {
   }
   
   /* Стили для картинки в модальном окне */
-  .modal-content-img {
+  .modal-img {
     margin: auto;
     position: relative;
     display: block;
     max-width: 80%;
     max-height: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.6s
+    /* animation-name: animatetop;
+    animation-duration: 0.6s */
   }
 
   /* Add Animation */
@@ -575,18 +575,24 @@ section .block {
     to {top: 0; opacity: 1}
 }
 
-.modal-content-box {
-    position: relative;
-    background-color: #fefefe;
+.modal-box {
+    /* position: relative;
     margin: auto;
-    padding: 18px;
+    padding: 18px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
     border: 1px solid #888;
     width: 70%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
+    user-select: none;
+
+    /* -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s */
   }
   
   /* Стили для кнопки закрытия модального окна */
@@ -607,7 +613,10 @@ section .block {
     cursor: pointer;
   }
   
-
+  .close-animation {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
 
 
 /* 
@@ -653,24 +662,24 @@ section .block {
     line-height: 1.4;
 }
  */  
-#modalBox .modal-body{
+#box1 .modal-body{
     padding: 0px 12px;
     line-height: 1.4;
 
 }
 
-#modalBox ul{
+#box1 ul{
     padding: 5px 0;
 }
-#modalBox  ul li {
+#box1  ul li {
     position: relative;
     padding: 0 0 0 33px;
     list-style-type: none;
 }
-#modalBox  ul li:nth-child(odd) {
+#box1  ul li:nth-child(odd) {
   background: #f9f9f9;
 }
-#modalBox ul li::before {
+#box1 ul li::before {
     content: '';
     position: absolute;
     border-style: solid;
@@ -682,11 +691,11 @@ section .block {
     width: 4px;
 }
 
-#modalBox .modal-header h5 {
+#box1 .modal-header h5 {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 8px 0;
-    /*! text-align: center; */
+    text-align: center;
     color: #76a900;
 } 
 .light-shadow{
