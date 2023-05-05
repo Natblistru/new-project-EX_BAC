@@ -620,6 +620,7 @@ section .block {
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    text-decoration: none;
   }
   
   /* Caption text */
@@ -663,7 +664,13 @@ section .block {
     from {opacity: .4}
     to {opacity: 1}
   }
-  
+
+
+  .audio audio {
+    max-width: 100%;
+    width: 100%;
+    margin: 0.5em 0 1em;
+  }
 
 /* Стили для модального окна */
 .modal {
