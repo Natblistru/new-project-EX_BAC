@@ -542,6 +542,44 @@ section .block {
     gap: 5px;
 }
 
+/* Style for Image Comparison Slider */
+
+.img-comp-container {
+    position: relative;
+    height: 400px; /*should be the same height as the images*/
+  }
+  
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow:hidden;
+  }
+  
+  .img-comp-overlay {
+    border-right: 1px solid rgb(104, 93, 93);
+  }
+  
+  .img-comp-img img {
+    display:block;
+    object-fit: cover;
+    border: 1px solid rgb(104, 93, 93);
+  }
+  
+  .img-comp-slider {
+    position: absolute;
+    z-index:9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: #a3cef1;
+    opacity: 0.8;
+    border-radius: 50%;
+    border: 1px solid rgb(104, 93, 93);
+  }
+
+
 
 /* Стили для модального окна */
 .modal {
@@ -564,11 +602,10 @@ section .block {
     height: 100%;
     object-fit: cover;
   }
-  
-  
-  
+    
   .modal-box {
     width: 60%;
+    padding: 15px;
   }
   
   
