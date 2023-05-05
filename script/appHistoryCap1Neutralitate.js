@@ -303,7 +303,7 @@ console.log(data)
           mySpan.addEventListener('click', function() {
             const imgPath = this.getAttribute('data-img');
             modalImg.src = imgPath;
-            // modalImg.style.zIndex = "98";
+            modalImg.style.zIndex = "98";
             modal.style.display = "block";
             modalImg.style.display = "block";
           });
@@ -316,12 +316,58 @@ console.log(data)
             const idxNota = +this.getAttribute('data-box') - 1;
             BoxInModalHeader.innerHTML = tema.subtitles[temaIdx].subjects[subjectIdx].note[idxNota].headerInnerHTML;
             BoxInModalBody.innerHTML = tema.subtitles[temaIdx].subjects[subjectIdx].note[idxNota].bodyInnerHTML;
-            // modalBox.style.zIndex = "99";
+            modalBox.style.zIndex = "99";
             modalBox.style.display = "block";
             modal.style.display = "block";
           });
         });
+
         initComparisons();
+
+        let slides = document.querySelectorAll(".mySlides");
+        let pagination = document.getElementById("pagination")
+        let prev = document.querySelector(".prev");
+        let next = document.querySelector(".next");
+
+        let slideIndex = 1;
+
+        Array.from(slides).forEach((img,idx)=>{
+            pagination.innerHTML +=`
+            <span class='dot'></span>
+            `
+        })
+
+        let dots = pagination.querySelectorAll(".dot");
+        console.log(dots)
+        Array.from(dots).forEach((dot,idx) => {
+          dot.addEventListener('click', () => {
+            slideIndex = idx+1;
+            showSlides(slideIndex);
+          })
+        })
+        
+        showSlides(slideIndex);
+
+        prev.addEventListener("click", ()=> {
+            showSlides(--slideIndex)
+        })
+        next.addEventListener("click", ()=> {
+          showSlides(++slideIndex)
+        })
+
+        function showSlides(n) {
+          let i;
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
       } 
       catch (error) { 
          console.error('Error:', error); 
